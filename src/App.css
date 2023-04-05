@@ -1,0 +1,168 @@
+@media screen and (max-width: 800px) {
+  .App {
+    min-height: 100vh;
+    /* font-size: calc(10px + 2vmin); */
+    scroll-behavior: smooth;
+  }
+
+  .Header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    min-width: 100%;
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;  
+  }
+
+  .Header h1{
+    font-size: 32px;
+    margin-left: 10px;
+  }
+
+  .Header_menu_icon{
+    margin-right: 10px;
+    background-color: rgb(235, 219, 219);
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50px;
+  }
+
+  .body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+/* -------------GreetUser Component---------------- */
+  .GreetUser_div{
+    background-color: rgb(235, 219, 219);
+    min-width: 90%;
+    text-align: center;
+    padding: 18px;
+    margin: 24px 0px 0px 0px;
+    border-radius: 8px;
+  }
+
+  .GreetUser_div h2{
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .GreetUser_activity_span h3{
+    font-size: 16px;
+    /* line-height: 20px; */
+  }
+
+  .GreetUser_activity_span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .GreetUser_activity_span span{
+    margin: 0px 5px;
+  }
+
+/* -------------EnterCode Component---------------- */
+  .EnterCode_div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 219, 219);
+    min-width: 90%;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 20px 0px 0px 0px;
+  }
+
+  .EnterCode_div button{
+    background: rgba(102, 52, 127, 1);
+    font-size: 18px;
+    height: 50px;
+    margin: 10px 0px;
+    outline: none;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+
+  .EnterCode_div input{
+    font-size: 18px;
+    height: 50px;
+    margin: 10px 0px;
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+  }
+
+/* -------------QuizesAvailable Header Component---------------- */
+  .QuizesAvailable_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    min-width: 90%;
+    border-radius: 8px;
+    margin: 30px 0px 10px 0px;
+  }
+
+  .QuizesAvailable_div h2{
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  .QuizesAvailable_div span{
+    font-size: 18px;
+    background-color: rgb(235, 219, 219);
+    height: 26px;
+    width: 91px;
+    border-radius: 0px;
+    background: rgba(246, 241, 241, 1);
+    padding: 4px;
+  }
+
+/* -------------QuizesAvailable Component---------------- */
+  .Quiz_List_div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+  .Quiz_List_item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin: 10px 8px 10px 8px;
+    height: 230px;
+    width: 90%;
+    border-radius: 4px;
+    border: 1px solid rgba(236, 215, 215, 1)
+  }
+
+  .Quiz_List_item h3{
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0px 0px 10px 10px;
+  }
+
+  .Quiz_List_item p{
+    font-size: 12px;
+  }
+
+  .Quiz_List_item img{
+    height: 130px;
+    width: 100%;
+    border-radius: 0px;
+    background-color: rgb(235, 219, 219);
+  }
+
+}
