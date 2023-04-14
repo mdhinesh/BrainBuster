@@ -1,72 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Route, Routes } from 'react-router-dom';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+
+import Home from './pages/Home';
+import CreateQuiz from './pages/CreateQuiz';
+import TakeQuiz from './pages/TakeQuiz';
+
+import {auth, provider} from './auth/config';
+import {signInWithPopup} from 'firebase/auth';
+import React, { useEffect, useState } from 'react';
 
 function App() {
 
+  const [value, setvalue] = useState<any | null>(null);
+
+  const handleClick = () => {
+    signInWithPopup(auth, provider).then((data) => {
+      setvalue(data.user.email);
+      // console.log(data.user.email);
+      localStorage.setItem('email', JSON.stringify(data.user.email));
+    }).catch((error) => {
+      console.log(error);
+    });
+  }
+
+  useEffect(() => {
+    const email:String | null = localStorage.getItem('email');
+    setvalue(email);
+  })
+
+
   return (
     <div className="App">
-
-      <div className="Header">
-        <h1 className="Header_logo">BrainBuster</h1>
-        <div className="Header_menu_icon"></div>
-      </div>
-
-      <div className='body'>
-
-        <div className='EnterCode_div'>
-          <input type="text" placeholder='enter a code to join'/>
-          <button>Enter Quiz</button>
-        </div>
-
-        <div className="GreetUser_div">
-          <h2>Hello Username!</h2>
-          <span className='GreetUser_activity_span'>
-            <h3>Edit profile</h3> 
-            <span>.</span>
-            <h3>View activity</h3>
-          </span>
-        </div>
-
-        <div className="QuizesAvailable_div">
-          <h2>Quizes available</h2>
-          <span>
-            <p>see more</p>
-          </span>
-        </div>
-
-        <div className="Quiz_List_div">
-
-          <div className="Quiz_List_item">
-            <img src="" alt="" />
-            <h3>Quiz name<p>MCQ - 10 Questions</p></h3>
+      <Routes>
+        <Route path="/" element={
+          value ? <Home /> : 
+          <div>
+            <button onClick={handleClick}>Signin with Google</button>
           </div>
-
-          <div className="Quiz_List_item">
-            <img src="" alt="" />
-            <h3>Quiz name <p>No choice - 10 Questions</p></h3>
-          </div>
-
-          <div className="Quiz_List_item">
-            <img src="" alt="" />
-            <h3>Quiz name <p>No choice - 10 Questions</p></h3>
-          </div>
-
-        </div>
-{/* 
-1. Users should be able to create a quiz by providing the quiz name, description, 
-points/grading system, and time limit.
-2. Users should be able to edit the quiz by adding or deleting questions and 
-adding or deleting multiple choice answer options.
-3. Users should be able to take the quiz and receive immediate feedback on their 
-score         
-*/}
-        <div className="CreateQuiz_div">
-          <h2>Create a quiz</h2>
-        </div>
-        
-      </div>
+        } />
+        <Route path='/createquiz' element={<CreateQuiz />} />
+        <Route path='/takequiz' element={<TakeQuiz />} />
+      </Routes>
+      {/* <Home /> */}
+      {/* <form action="">
+        <input type="text" className="form_quiz_name" />
+        <input type="text" className="form_quiz_description" />
+        <input type="text" className="form_quiz_points" />
+        <input type="text" className="form_quiz_time_limit" />
+      </form> */}
     </div>
   )
 }

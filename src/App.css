@@ -1,4 +1,4 @@
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) { */
   .App {
     min-height: 100vh;
     /* font-size: calc(10px + 2vmin); */
@@ -38,7 +38,7 @@
 
 /* -------------GreetUser Component---------------- */
   .GreetUser_div{
-    background-color: rgb(235, 219, 219);
+    border: 1px solid rgba(236, 215, 215, 1);
     min-width: 90%;
     text-align: center;
     padding: 18px;
@@ -99,7 +99,33 @@
     border: none;
     border-radius: 8px;
   }
+/* ------------------CreateQuiz_div----------------------- */
+  .CreateQuiz_div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 219, 219);
+    min-width: 90%;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 20px 0px 0px 0px;
+  }
 
+  .CreateQuiz_div button{
+    background: rgb(76, 37, 95);
+    font-size: 18px;
+    height: 50px;
+    margin: 10px 0px;
+    outline: none;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 8px;
+  }
+
+  .Link_to_createquiz{
+    text-decoration: none;
+    color: white;
+  }
 /* -------------QuizesAvailable Header Component---------------- */
   .QuizesAvailable_div{
     display: flex;
@@ -115,6 +141,7 @@
   .QuizesAvailable_div h2{
     font-size: 24px;
     line-height: 40px;
+    opacity: 0.8;
   }
 
   .QuizesAvailable_div span{
@@ -165,4 +192,4 @@
     background-color: rgb(235, 219, 219);
   }
 
-}
+/* } */

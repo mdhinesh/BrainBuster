@@ -1,0 +1,130 @@
+.takequiz_body{
+    background-color: black;
+}
+
+.takequiz_card{
+    background-color: rgb(40, 37, 69);
+    margin: 0px 10px;
+    border-radius: 8px;
+}
+
+.takequiz_Header {
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no_of_questions{
+    background-color: rgb(32,33,36);
+    color: white;
+    height: 40px;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.question_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(40, 37, 69);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    min-height: 180px;
+    /* margin: 0px 10px 0px 10px; */
+}
+
+.question{
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.instruction_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    padding: 10px 10px 0px 10px;
+}
+
+.instruction{
+    opacity: 0.8;
+}
+
+.choose_answer_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.choose_answer_mcq_subdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 90%;
+    min-height: 60px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: left;
+    background-color: white;
+    padding: 10px;
+}
+
+.mcq_answer{
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 90%;
+}
+
+.mcq_answer_checkbox_radio{
+    width: 20px;
+    height: 20px;
+    margin: 10px 0px 10px 10px;
+}
+
+
+.done_button_div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 44px;
+    padding-bottom: 10px;
+    margin: 20px 0px 0px 0px;
+}
+
+.done_button_div p{
+    color: white;
+    font-size: 12px;
+    text-align: right;
+    line-height: 16px;
+    border-left: 3px solid rgb(43,55,61);
+    padding-left: 20px;
+}
+
+.done_button_div button{
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background-color: rgb(43,55,61);
+    color: rgb(255, 229, 229);
+}
+
+.done_button_div button img{
+    width: 25px;
+    height: 25px;
+}
