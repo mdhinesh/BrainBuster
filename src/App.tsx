@@ -34,12 +34,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={
-          value ? <Home /> : 
-          <div>
-            <button onClick={handleClick}>Signin with Google</button>
-          </div>
-        } />
+        <Route path="/" element={<Home />} />
         <Route path='/createquiz' element={<CreateQuiz />} />
         <Route path='/takequiz' element={<TakeQuiz />} />
       </Routes>

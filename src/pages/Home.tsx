@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  
+
     const handleclick = () => {
         localStorage.removeItem('email');
         window.location.reload();
@@ -15,6 +15,11 @@ const Home = () => {
         setvalue(email ? email.replace(/@gmail\.com|"/g, "") : null);
     })
     
+    onload = () => {
+        const value = "Username@gmail.com";
+        localStorage.setItem('email', JSON.stringify(value));
+    }
+
     return ( 
         <div>
             <div className="Header">
